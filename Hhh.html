@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiba Website Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body { color: #fff; background-color: #111; overflow-x: hidden; }
+
+        section { padding: 80px 10%; }
+
+        /* Navigation Bar - Red background */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            display: flex; justify-content: flex-end;
+            padding: 15px 10%; z-index: 1000;
+            background-color: #C00A35;
+        }
+
+        nav a {
+            color: white; /* Start White */
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center; text-align: center;
+        }
+
+        .hero h1 { font-size: 3.5rem; }
+        /* BOLD TEXT REQUIREMENT */
+        .hero p { font-size: 1.5rem; font-weight: bold; margin: 20px 0; }
+
+        .btn {
+            background-color: #C00A35;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        /* CLASSES FOR JAVASCRIPT CLICK COLORS */
+        .clicked-green-text { color: #00FF00 !important; }
+        .clicked-green-bg { background-color: #00FF00 !important; color: black !important; }
+
+        /* About Section */
+        #about { background-color: #D1D9ED; color: #333; }
+        .flex-row { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+        .flex-item { flex: 1; min-width: 300px; }        .profile-img { width: 100%; max-width: 350px; border-radius: 10px; }
+
+        /* Services */
+        #service { background-color: ##3ee2cd; color: #333; }
+
+        /* Skills */
+        #skill { background-color: ##a4e23e; color: white; }
+        .bar-container { background: rgba(255,255,255,0.3); height: 10px; border-radius: 5px; margin: 10px 0 20px; }
+        .bar-fill { height: 100%; background: #C00A35; border-radius: 5px; }
+
+        /* Contact Section - Dark background */
+        #contact { background-color: #2C3539; padding-bottom: 50px; }
+        .contact-grid { display: flex; flex-wrap: wrap; gap: 40px; }
+        .contact-form { flex: 1.5; }
+        .contact-form input, .contact-form textarea {
+            width: 100%; padding: 15px; margin-bottom: 10px; border: none; background: #fff;
+        }
+
+        .contact-info { flex: 1; font-size: 14px; line-height: 2; }
+        .social-icons { margin-top: 20px; }
+        .social-icons span { margin-right: 15px; font-weight: bold; }
+
+        /* FOOTER REQUIREMENT - YELLOW TEXT */
+        footer {
+            background-color: #000;
+            padding: 25px;
+            text-align: center;
+            font-size: 13px;
+            color: yellow; /* Yellow color */
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } }
+    </style>
+</head>
+<body id="beginning">
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#beginning" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#service" class="nav-link">Service</a>
+        <a href="#skill" class="nav-link">Skill</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <h1>Hello, I am Hiba muhammed</h1>
+        <p>I am G11 Web Design student</p>
+        <button class="btn js-color-btn">contact</button>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="flex-row">
+            <div class="flex-item">
+                <img src="Hijabi.jpg" alt="Profile" class="profile-img">
+            </div>
+            <div class="flex-item">
+                <h2>About Me</h2>                <p>Hi, my name is Hiba Muhammed.Iam web design and Development student for grade 11.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE -->
+    <section id="service">
+        <h2 style="text-align:center; margin-bottom:30px;">My Services</h2>
+        <div class="flex-row">
+            <div class="flex-item"><h3>Web Design</h3><p>Creating professional websites.</p></div>
+            <div class="flex-item"><h3>Teaching</h3><p>ICT and Web Design lessons.</p></div>
+        </div>
+    </section>
+
+    <!-- SKILL -->
+    <section id="skill">
+        <div class="flex-row">
+            <div class="flex-item">
+                <h2>My creative Skills</h2>
+                <p>My creative skill helps me think of new ideas and use my imagination.I enjoy creating things like writing or drawing because it makes me happy.</p><br>
+                <!-- READ MORE: SCROLL TO TOP -->
+                <button class="btn js-color-btn back-to-top">Read More</button>
+            </div>
+            <div class="flex-item">
+                <p>HTML 90%</p><div class="bar-container"><div class="bar-fill" style="width: 80%;"></div></div>
+                <p>CSS 85%</p><div class="bar-container"><div class="bar-fill" style="width: 85%;"></div></div>
+                <p>PHP 40%</p><div class="bar-container"><div class="bar-fill" style="width: 40%;"></div></div>
+                <p>JS 55%</p><div class="bar-container"><div class="bar-fill" style="width: 55%;"></div></div>
+            </div>
+        </div>
+    </section>
+
+    < 
+!-- CONTACT -->
+    <section id="contact">
+        <div class="contact-grid">
+            <div class="contact-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea rows="5" placeholder="Message"></textarea>
+                <!-- SEND MESSAGE: SCROLL TO TOP & TURN GREEN -->
+                <button class="btn js-color-btn back-to-top">send message</button>
+            </div>
+            <div class="contact-info">
+                <p>Please contact and support me, just send your subjects and let me help you!</p><br>
+                <p>👤 address</p>
+                <p>📞 +251-9*******</p>
+                <p>✉️ contact@hiba.com</p>
+                <div class="social-icons">
+                    <span>f</span> <span>y</span> <span>i</span>
+                </div>
+            </div>
+        </div>
+    </section>
+<button class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+    <!-- FOOTER (YELLOW) -->
+    <footer>
+        @copy right hiba website all right reserve
+    </footer>
+
+    <script>
+        // 1. CLICK TO CHANGE COLOR LOGIC
+        const navLinks = document.querySelectorAll('.nav-link');
+        const allButtons = document.querySelectorAll('.js-color-btn');
+
+        // Nav links: White to Green
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(l => l.classList.remove('clicked-green-text'));
+                this.classList.add('clicked-green-text');
+            });
+        });
+
+        // Buttons: Red to Green
+        allButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.add('clicked-green-bg');
+            });
+        });
+
+        // 2. BACK TO BEGINNING LOGIC
+        const scrollTopBtns = document.querySelectorAll('.back-to-top');
+        scrollTopBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+
+</body>
+</html>
